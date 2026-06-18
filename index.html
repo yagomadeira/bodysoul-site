@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body & Soul Fitness — Academia na Praia de Itaparica, Vila Velha</title>
+<meta name="description" content="Musculação, Pilates e Bike Indoor com professores que acompanham seu treino de perto. Av. Saturnino Rangel Mauro, 3250 — Praia de Itaparica, Vila Velha/ES. Aberta das 5h30 às 22h.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230E0E0E'/><text x='32' y='44' font-family='Arial Black' font-size='28' fill='%23FFC700' text-anchor='middle' font-weight='900'>B%26S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0E0E0E;
+  --black-soft:#161616;
+  --black-card:#1C1C1C;
+  --yellow:#FFC700;
+  --yellow-deep:#E8B400;
+  --paper:#FAF7EF;
+  --white:#FFFFFF;
+  --grey:#A9A9A4;
+  --grey-dark:#5d5d58;
+  --line:rgba(255,255,255,.09);
+  --radius:18px;
+  --display:'Anton',sans-serif;
+  --body:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--black);color:var(--white);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1240px,92%);margin:0 auto}
+.display{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:1.04;letter-spacing:.5px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow)}
+.eyebrow::before{content:"";width:26px;height:3px;background:var(--yellow);border-radius:2px}
+section{padding:96px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:.95rem;padding:16px 30px;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;border:none}
+.btn-yellow{background:var(--yellow);color:var(--black)}
+.btn-yellow:hover{background:var(--yellow-deep);transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,199,0,.28)}
+.btn-ghost{border:2px solid var(--line);color:var(--white)}
+.btn-ghost:hover{border-color:var(--yellow);color:var(--yellow);transform:translateY(-2px)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+.logo-link{display:flex;align-items:center}
+.header-logo{height:52px;width:auto;object-fit:contain}
+@media(max-width:600px){.header-logo{height:40px}}
+
+/* ---------- Header ---------- */
+header{position:sticky;top:0;z-index:60;background:rgba(14,14,14,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.wordmark{font-family:var(--display);font-size:1.45rem;letter-spacing:1px;text-transform:uppercase;display:flex;flex-direction:column;line-height:1}
+.wordmark .amp{color:var(--yellow)}
+.wordmark small{font-family:var(--body);font-size:.58rem;font-weight:800;letter-spacing:.34em;color:var(--grey);margin-top:4px}
+.nav ul{display:flex;gap:34px;list-style:none}
+.nav ul a{font-size:.9rem;font-weight:700;color:var(--grey);transition:color .15s}
+.nav ul a:hover{color:var(--yellow)}
+.nav .btn{padding:11px 22px;font-size:.85rem}
+.burger{display:none;background:none;border:none;cursor:pointer;width:42px;height:42px;flex-direction:column;justify-content:center;gap:6px;align-items:center}
+.burger span{display:block;width:24px;height:2.5px;background:var(--white);border-radius:2px;transition:.25s}
+@media(max-width:920px){
+  .nav ul,.nav .btn-nav{display:none}
+  .burger{display:flex}
+  .mobile-menu{position:fixed;inset:74px 0 auto 0;background:var(--black-soft);border-bottom:1px solid var(--line);padding:18px 6% 28px;display:none;z-index:59}
+  .mobile-menu.open{display:block}
+  .mobile-menu a{display:block;padding:14px 0;font-weight:700;border-bottom:1px solid var(--line);color:var(--white)}
+  .mobile-menu a:last-child{border:none;color:var(--yellow)}
+}
+@media(min-width:921px){.mobile-menu{display:none!important}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;padding:110px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(3rem,7vw,5.6rem);margin:22px 0 20px}
+.hero h1 .hl{color:var(--yellow)}
+.hero p.lead{font-size:1.15rem;color:var(--grey);max-width:34rem;margin-bottom:36px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-note{margin-top:30px;font-size:.85rem;font-weight:700;color:var(--grey-dark);display:flex;align-items:center;gap:8px}
+.hero-note svg{flex:none}
+.hero-art{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-logo-img{width:100%;max-width:520px;opacity:.9;filter:drop-shadow(0 0 40px rgba(255,199,0,.12))}
+.hero-bg-word{position:absolute;right:-2%;bottom:-4%;font-family:var(--display);font-size:clamp(7rem,18vw,15rem);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.05);text-transform:uppercase;pointer-events:none;user-select:none;line-height:1}
+@media(max-width:920px){
+  .hero{padding:70px 0 60px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{order:-1;margin-bottom:-10px}
+  .hero-logo-img{max-width:280px;opacity:.8}
+}
+
+/* ---------- Info strip ---------- */
+.strip{background:var(--yellow);color:var(--black);padding:18px 0}
+.strip .container{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}
+.strip span{font-weight:800;font-size:.92rem;display:flex;align-items:center;gap:9px}
+.strip svg{flex:none}
+
+/* ---------- Modalidades ---------- */
+.section-head{max-width:46rem;margin-bottom:54px}
+.section-head h2{font-size:clamp(2.1rem,4.4vw,3.4rem);margin-top:18px}
+.section-head p{color:var(--grey);margin-top:14px;font-size:1.05rem}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.mod{background:var(--black-card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;position:relative;overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+.mod:hover{transform:translateY(-6px);border-color:rgba(255,199,0,.45)}
+.mod .num{font-family:var(--display);font-size:.95rem;color:var(--yellow);letter-spacing:2px}
+.mod h3{font-family:var(--display);font-size:1.6rem;text-transform:uppercase;letter-spacing:.5px;margin:14px 0 12px}
+.mod p{color:var(--grey);font-size:.96rem}
+.mod .tag{display:inline-block;margin-top:18px;background:rgba(255,199,0,.1);color:var(--yellow);font-size:.78rem;font-weight:800;padding:7px 14px;border-radius:999px;letter-spacing:.05em}
+@media(max-width:920px){.mods{grid-template-columns:1fr}}
+
+/* ---------- Sobre / estrutura ---------- */
+.about{background:var(--black-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about h2{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-top:18px}
+.about p{color:var(--grey);margin-top:16px}
+.about .pillars{margin-top:30px;display:grid;gap:14px}
+.pillar{display:flex;gap:14px;align-items:flex-start}
+.pillar .dot{flex:none;width:34px;height:34px;border-radius:10px;background:rgba(255,199,0,.12);display:flex;align-items:center;justify-content:center;color:var(--yellow);font-weight:800;font-size:.9rem}
+.pillar strong{display:block;font-size:.98rem}
+.pillar span{color:var(--grey);font-size:.9rem}
+.photo-frame{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(160deg,#1d1d1d,#111);border:1px solid var(--line);aspect-ratio:4/4.6;display:flex;align-items:center;justify-content:center}
+.photo-frame::after{content:"";position:absolute;inset:14px;border:1.5px dashed rgba(255,199,0,.35);border-radius:12px;pointer-events:none}
+.photo-frame .ph{color:var(--grey-dark);font-weight:700;font-size:.85rem;text-align:center;padding:0 34px;line-height:1.5}
+.photo-frame .ph b{color:var(--yellow);display:block;font-size:.95rem;margin-bottom:6px}
+.photo-grid-about{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-radius:var(--radius);overflow:hidden}
+.about-photo{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform .4s ease}
+.about-photo:hover{transform:scale(1.04)}
+.about-photo.main{grid-column:1/-1;aspect-ratio:16/9}
+/* Gallery section */
+.gallery{padding:40px 0 96px}
+.gallery-scroll{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gallery-scroll img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px;border:1px solid var(--line);transition:transform .3s ease,border-color .3s ease}
+.gallery-scroll img:hover{transform:translateY(-4px);border-color:rgba(255,199,0,.4)}
+@media(max-width:920px){.about-grid{grid-template-columns:1fr}.gallery-scroll{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- Planos ---------- */
+.plans{background:var(--paper);color:var(--black)}
+.plans .eyebrow{color:var(--black)}
+.plans .eyebrow::before{background:var(--black)}
+.plans .section-head p{color:#55554e}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px}
+.tab{background:transparent;border:2px solid #d9d4c4;color:#55554e;font-family:var(--body);font-weight:800;font-size:.9rem;padding:12px 22px;border-radius:999px;cursor:pointer;transition:.18s}
+.tab:hover{border-color:var(--black)}
+.tab.active{background:var(--black);border-color:var(--black);color:var(--yellow)}
+.period{display:none;align-items:center;gap:12px;margin-bottom:34px}
+.period.show{display:inline-flex}
+.period span{font-size:.85rem;font-weight:800;color:#55554e}
+.switch{position:relative;width:58px;height:30px;background:var(--black);border-radius:999px;cursor:pointer;flex:none}
+.switch::after{content:"";position:absolute;top:4px;left:4px;width:22px;height:22px;background:var(--yellow);border-radius:50%;transition:.2s}
+.switch.right::after{left:32px}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.plan{background:var(--white);border:1.5px solid #e7e2d2;border-radius:var(--radius);padding:30px 28px;position:relative;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.plan:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(20,20,10,.1)}
+.plan.feature{background:var(--black);color:var(--white);border-color:var(--black)}
+.plan .badge{position:absolute;top:-13px;left:24px;background:var(--yellow);color:var(--black);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.plan h4{font-family:var(--display);text-transform:uppercase;font-size:1.25rem;letter-spacing:.5px;margin-bottom:4px}
+.plan .sub{font-size:.85rem;color:#7a7a70;font-weight:600;min-height:2.4em}
+.plan.feature .sub{color:var(--grey)}
+.plan .price{margin:18px 0 4px;display:flex;align-items:baseline;gap:6px}
+.plan .price .cur{font-weight:800;font-size:.95rem}
+.plan .price .val{font-family:var(--display);font-size:2.6rem;letter-spacing:.5px}
+.plan .price .per{color:#7a7a70;font-weight:700;font-size:.85rem}
+.plan.feature .price .per{color:var(--grey)}
+.plan ul{list-style:none;margin:16px 0 24px;display:grid;gap:9px;flex:1}
+.plan li{font-size:.9rem;font-weight:600;display:flex;gap:9px;align-items:flex-start;color:#3c3c36}
+.plan.feature li{color:#d8d8d2}
+.plan li::before{content:"✓";color:var(--yellow-deep);font-weight:800;flex:none}
+.plan.feature li::before{color:var(--yellow)}
+.plan .btn{width:100%;padding:14px}
+.plan .btn-dark{background:var(--black);color:var(--yellow)}
+.plan .btn-dark:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.freq-table{width:100%;border-collapse:collapse;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1.5px solid #e7e2d2}
+.freq-table th{background:var(--black);color:var(--yellow);font-family:var(--display);font-weight:400;letter-spacing:1px;text-transform:uppercase;font-size:.95rem;padding:16px}
+.freq-table td{padding:16px;text-align:center;font-weight:700;border-top:1px solid #efeadb;font-size:.95rem}
+.freq-table td:first-child{text-align:left;color:#55554e}
+.freq-table .big{font-family:var(--display);font-size:1.15rem;letter-spacing:.5px}
+.plans-note{margin-top:26px;font-size:.85rem;color:#7a7a70;font-weight:600}
+.pane{display:none}
+.pane.show{display:block}
+@media(max-width:640px){
+  .freq-table th,.freq-table td{padding:12px 8px;font-size:.85rem}
+  .freq-table .big{font-size:1rem}
+  .freq-table .btn{padding:9px 14px!important;font-size:.72rem!important}
+}
+.pane .plan-grid{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+/* ---------- Horários ---------- */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.hours-table{width:100%;border-collapse:collapse}
+.hours-table td{padding:16px 4px;border-bottom:1px solid var(--line);font-weight:600;color:var(--grey)}
+.hours-table td:last-child{text-align:right;color:var(--white);font-weight:800}
+.hours-table tr.closed td:last-child{color:var(--grey-dark)}
+.hours-side h2{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-top:18px}
+.hours-side p{color:var(--grey);margin-top:16px}
+.bike-card{margin-top:28px;background:var(--black-card);border:1px solid var(--line);border-left:4px solid var(--yellow);border-radius:12px;padding:22px 24px}
+.bike-card strong{font-family:var(--display);text-transform:uppercase;letter-spacing:.5px;font-weight:400;font-size:1.05rem}
+.bike-card p{margin-top:8px;font-size:.92rem}
+@media(max-width:920px){.hours-grid{grid-template-columns:1fr}}
+
+/* ---------- Localização ---------- */
+.loc{background:var(--black-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.loc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:center}
+.loc h2{font-size:clamp(2.1rem,4.4vw,3.2rem);margin-top:18px}
+.loc p{color:var(--grey);margin-top:14px}
+.loc .addr{margin-top:24px;font-weight:800;font-size:1.05rem;color:var(--white);line-height:1.5}
+.map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:16/11}
+.map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(.2) contrast(1.05)}
+@media(max-width:920px){.loc-grid{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq-list{max-width:760px}
+.faq{border-bottom:1px solid var(--line)}
+.faq button{width:100%;background:none;border:none;color:var(--white);font-family:var(--body);font-weight:800;font-size:1.02rem;text-align:left;padding:24px 44px 24px 0;cursor:pointer;position:relative}
+.faq button::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:1.6rem;color:var(--yellow);font-weight:400;transition:transform .25s}
+.faq.open button::after{transform:translateY(-50%) rotate(45deg)}
+.faq .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq .ans p{color:var(--grey);padding:0 0 24px;font-size:.96rem;max-width:42rem}
+
+/* ---------- CTA final ---------- */
+.cta-final{background:var(--yellow);color:var(--black);text-align:center;padding:110px 0}
+.cta-final h2{font-size:clamp(2.4rem,6vw,4.6rem)}
+.cta-final p{font-weight:700;margin:18px auto 38px;max-width:34rem;color:#3d3300}
+.cta-final .btn{background:var(--black);color:var(--yellow);font-size:1.05rem;padding:19px 40px}
+.cta-final .btn:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.3)}
+
+/* ---------- Footer ---------- */
+footer{padding:70px 0 36px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;padding-bottom:48px;border-bottom:1px solid var(--line)}
+.foot-grid h5{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:1px;font-size:1rem;color:var(--yellow);margin-bottom:16px}
+.foot-grid p,.foot-grid a{color:var(--grey);font-size:.92rem;display:block;margin-bottom:9px}
+.foot-grid a:hover{color:var(--yellow)}
+.copy-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:26px;color:var(--grey-dark);font-size:.82rem;font-weight:600}
+@media(max-width:920px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---------- WhatsApp float ---------- */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:70;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .18s}
+.wa-float:hover{transform:scale(1.08)}
+@media(max-width:600px){section{padding:70px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo-link"><img src="images/logo-hero.png" alt="Body & Soul Fitness" class="header-logo"></a>
+    <ul>
+      <li><a href="#modalidades">Modalidades</a></li>
+      <li><a href="#academia">A academia</a></li>
+      <li><a href="#planos">Planos</a></li>
+      <li><a href="#horarios">Horários</a></li>
+      <li><a href="#local">Onde estamos</a></li>
+    </ul>
+    <a class="btn btn-yellow btn-nav" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Aula experimental</a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a href="#modalidades">Modalidades</a>
+    <a href="#academia">A academia</a>
+    <a href="#planos">Planos</a>
+    <a href="#horarios">Horários</a>
+    <a href="#local">Onde estamos</a>
+    <a href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">→ Agendar aula experimental</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Academia em Praia de Itaparica · Vila Velha</span>
+      <h1 class="display">Treine de corpo<br>e <span class="hl">alma.</span></h1>
+      <p class="lead">Musculação, Pilates e Bike Indoor com professores que acompanham seu treino de perto — das 5h30 às 22h, a poucos passos da praia.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-yellow" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Agendar aula experimental</a>
+        <a class="btn btn-ghost" href="#planos">Ver planos</a>
+      </div>
+      <div class="hero-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#FFC700" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Aceitamos WellHub e TotalPass · Planos a partir de R$ 114,90/mês
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img src="images/logo-hero.png" alt="Body & Soul Fitness" class="hero-logo-img">
+      <span class="hero-bg-word">B&amp;S</span>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="strip">
+  <div class="container">
+    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0E0E0E" stroke-width="2.4"/><path d="M12 7v5l3 2" stroke="#0E0E0E" stroke-width="2.4" stroke-linecap="round"/></svg>Seg a sex, 5h30 às 22h</span>
+    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#0E0E0E" stroke-width="3" stroke-linecap="round"/></svg>Check-in WellHub e TotalPass</span>
+    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.9 6.3 6.6.6-5 4.5 1.5 6.6L12 16.8 6 20l1.5-6.6-5-4.5 6.6-.6z" stroke="#0E0E0E" stroke-width="2"/></svg>Professores qualificados</span>
+    <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="#0E0E0E" stroke-width="2.2"/><circle cx="12" cy="10" r="2.6" stroke="#0E0E0E" stroke-width="2.2"/></svg>Praia de Itaparica</span>
+  </div>
+</div>
+
+<!-- MODALIDADES -->
+<section id="modalidades">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Modalidades</span>
+      <h2 class="display">Um treino para cada objetivo</h2>
+      <p>Tudo em um só lugar: força, mobilidade e cardio coletivo — sempre com professor por perto, do primeiro dia em diante.</p>
+    </div>
+    <div class="mods">
+      <article class="mod reveal">
+        <span class="num">01</span>
+        <h3>Musculação</h3>
+        <p>Equipamentos completos em dois andares e professores que montam e ajustam seu treino de acordo com a sua evolução — não um treino de prateleira.</p>
+        <span class="tag">Acompanhamento de verdade</span>
+      </article>
+      <article class="mod reveal">
+        <span class="num">02</span>
+        <h3>Pilates</h3>
+        <p>Fortalecimento, postura e mobilidade em turmas de 1 a 5 vezes por semana. Você escolhe a frequência, o plano se adapta a você.</p>
+        <span class="tag">1x a 5x por semana</span>
+      </article>
+      <article class="mod reveal">
+        <span class="num">03</span>
+        <h3>Bike Indoor</h3>
+        <p>Aula coletiva de alta energia para queimar caloria pedalando em grupo. Vagas limitadas — garanta a sua pelo WhatsApp.</p>
+        <span class="tag">Seg/Qua 07:10 · Ter/Qui 19:10</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE / A ACADEMIA -->
+<section class="about" id="academia">
+  <div class="container about-grid">
+    <div class="reveal">
+      <span class="eyebrow">A academia</span>
+      <h2 class="display">Completa, sem ser uma multidão</h2>
+      <p>A Body &amp; Soul é uma academia de bairro no melhor sentido: estrutura completa de musculação em dois andares, estúdio de Pilates e aulas coletivas — sem fila para equipamento e sem treinar no meio de uma multidão.</p>
+      <p>Aqui os professores sabem seu nome, conhecem seu objetivo e acompanham seu progresso de perto. É isso que faz aluno ficar.</p>
+      <div class="pillars">
+        <div class="pillar"><span class="dot">✓</span><div><strong>Avaliação física com bioimpedância</strong><span>Comece sabendo seu ponto de partida e acompanhe a evolução com dados.</span></div></div>
+        <div class="pillar"><span class="dot">✓</span><div><strong>Cardio no mezanino</strong><span>Esteiras com vista para o salão — aquecimento e cardio sem disputar espaço.</span></div></div>
+        <div class="pillar"><span class="dot">✓</span><div><strong>Do madrugador ao pós-trabalho</strong><span>Aberta das 5h30 às 22h durante a semana e aos sábados pela manhã.</span></div></div>
+      </div>
+    </div>
+    <div class="photo-grid-about reveal">
+      <img src="images/fachada.jpeg" alt="Fachada Body & Soul Fitness" class="about-photo main">
+      <img src="images/recepcao.jpeg" alt="Recepção" class="about-photo">
+      <img src="images/interior-1.jpeg" alt="Salão de musculação" class="about-photo">
+      <img src="images/mezanino-1.jpeg" alt="Mezanino com cardio" class="about-photo">
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Estrutura</span>
+      <h2 class="display">Conheça nosso espaço</h2>
+      <p>Dois andares de musculação, estúdio de Pilates, sala de Bike Indoor e cardio no mezanino — tudo que você precisa, sem fila.</p>
+    </div>
+    <div class="gallery-scroll reveal">
+      <img src="images/equipamentos-1.jpeg" alt="Equipamentos de musculação" loading="lazy">
+      <img src="images/esteiras.jpeg" alt="Área de esteiras e cardio" loading="lazy">
+      <img src="images/equipamentos-2.jpeg" alt="Equipamentos de livre" loading="lazy">
+      <img src="images/sala-bike.jpeg" alt="Sala de Bike Indoor" loading="lazy">
+      <img src="images/pilates.jpeg" alt="Estúdio de Pilates" loading="lazy">
+      <img src="images/equipamentos-3.jpeg" alt="Área de peso livre" loading="lazy">
+      <img src="images/interior-2.jpeg" alt="Vista interna da academia" loading="lazy">
+      <img src="images/equipamentos-4.jpeg" alt="Área de máquinas" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- PLANOS -->
+<section class="plans" id="planos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Planos</span>
+      <h2 class="display">Escolha o seu ritmo</h2>
+      <p>Sem pegadinha: quanto maior o compromisso, menor a mensalidade. Todos os planos dão acesso ao acompanhamento dos professores.</p>
+    </div>
+
+    <div class="tabs reveal" role="tablist">
+      <button class="tab active" data-pane="p-musc">Musculação</button>
+      <button class="tab" data-pane="p-combo">Musculação + Pilates</button>
+      <button class="tab" data-pane="p-pilates">Pilates</button>
+      <button class="tab" data-pane="p-extra">VIP &amp; Extras</button>
+    </div>
+
+    <div class="period" id="periodToggle">
+      <span>Mensal</span>
+      <div class="switch" id="periodSwitch" role="switch" aria-label="Alternar entre plano mensal e trimestral"></div>
+      <span>Trimestral <b style="color:#1a8f3c">(economize)</b></span>
+    </div>
+
+    <!-- Musculação -->
+    <div class="pane show" id="p-musc">
+      <div class="plan-grid">
+        <article class="plan">
+          <h4>Mensal</h4>
+          <p class="sub">Para começar sem compromisso longo</p>
+          <div class="price"><span class="cur">R$</span><span class="val">154,90</span><span class="per">/mês</span></div>
+          <ul>
+            <li>Musculação completa</li>
+            <li>Treino montado e acompanhado</li>
+            <li>Acesso em todo o horário de funcionamento</li>
+          </ul>
+          <a class="btn btn-dark" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20mensal%20de%20muscula%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero esse</a>
+        </article>
+        <article class="plan feature">
+          <span class="badge">Mais escolhido</span>
+          <h4>Semestral</h4>
+          <p class="sub">Constância paga: R$ 20 a menos por mês</p>
+          <div class="price"><span class="cur">R$</span><span class="val">134,90</span><span class="per">/mês</span></div>
+          <ul>
+            <li>Tudo do plano mensal</li>
+            <li>Valor congelado por 6 meses</li>
+            <li>Melhor custo-benefício para quem leva a sério</li>
+          </ul>
+          <a class="btn btn-yellow" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20semestral%20de%20muscula%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero esse</a>
+        </article>
+        <article class="plan">
+          <h4>Anual</h4>
+          <p class="sub">O menor valor mensal da academia</p>
+          <div class="price"><span class="cur">R$</span><span class="val">124,90</span><span class="per">/mês</span></div>
+          <ul>
+            <li>Tudo do plano mensal</li>
+            <li>Valor congelado por 12 meses</li>
+            <li>R$ 360 de economia no ano vs. mensal</li>
+          </ul>
+          <a class="btn btn-dark" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20anual%20de%20muscula%C3%A7%C3%A3o." target="_blank" rel="noopener">Quero esse</a>
+        </article>
+        <article class="plan">
+          <h4>Horário Especial</h4>
+          <p class="sub">Entrada das 12h às 16h · não inclui Bike Indoor</p>
+          <div class="price"><span class="cur">R$</span><span class="val">114,90</span><span class="per">/mês</span></div>
+          <ul>
+            <li>Musculação completa</li>
+            <li>Horário mais tranquilo da academia</li>
+            <li>Ideal para quem tem a tarde livre</li>
+          </ul>
+          <a class="btn btn-dark" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Hor%C3%A1rio%20Especial." target="_blank" rel="noopener">Quero esse</a>
+        </article>
+      </div>
+    </div>
+
+    <!-- Musculação + Pilates -->
+    <div class="pane" id="p-combo">
+      <table class="freq-table">
+        <thead><tr><th style="text-align:left">Frequência do Pilates</th><th>Valor por mês</th><th></th></tr></thead>
+        <tbody id="comboBody"></tbody>
+      </table>
+      <p class="plans-note">Musculação liberada todos os dias + Pilates na frequência escolhida. No trimestral, o valor mensal fica menor.</p>
+    </div>
+
+    <!-- Pilates -->
+    <div class="pane" id="p-pilates">
+      <table class="freq-table">
+        <thead><tr><th style="text-align:left">Frequência semanal</th><th>Valor por mês</th><th></th></tr></thead>
+        <tbody id="pilatesBody"></tbody>
+      </table>
+      <p class="plans-note">Turmas reduzidas com professor. No trimestral, o valor mensal fica menor.</p>
+    </div>
+
+    <!-- VIP & extras -->
+    <div class="pane" id="p-extra">
+      <div class="plan-grid">
+        <article class="plan feature">
+          <span class="badge">Resultado acelerado</span>
+          <h4>Aluno VIP</h4>
+          <p class="sub">Acompanhamento profissional personalizado, treino a treino</p>
+          <div class="price"><span class="cur">R$</span><span class="val">449,90</span><span class="per">/mês</span></div>
+          <ul>
+            <li>Professor dedicado ao seu treino</li>
+            <li>Planejamento individual de evolução</li>
+            <li>Trimestral: R$ 399,90/mês</li>
+          </ul>
+          <a class="btn btn-yellow" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20Aluno%20VIP." target="_blank" rel="noopener">Quero esse</a>
+        </article>
+        <article class="plan">
+          <h4>Avaliação Física</h4>
+          <p class="sub">Com bioimpedância — saiba exatamente de onde você parte</p>
+          <div class="price"><span class="cur">R$</span><span class="val">89,99</span><span class="per">avulsa</span></div>
+          <ul>
+            <li>Análise de composição corporal</li>
+            <li>Dados para montar o treino certo</li>
+            <li>Repita e acompanhe sua evolução</li>
+          </ul>
+          <a class="btn btn-dark" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Quero%20agendar%20uma%20avalia%C3%A7%C3%A3o%20f%C3%ADsica%20com%20bioimped%C3%A2ncia." target="_blank" rel="noopener">Agendar avaliação</a>
+        </article>
+        <article class="plan">
+          <h4>WellHub / TotalPass</h4>
+          <p class="sub">Sua empresa tem WellHub ou TotalPass? Treine aqui</p>
+          <div class="price"><span class="val" style="font-size:1.9rem">Check-in liberado</span></div>
+          <ul>
+            <li>Faça seu check-in e treine conosco</li>
+            <li>Mesma estrutura, mesmo acompanhamento</li>
+          </ul>
+          <a class="btn btn-dark" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Uso%20WellHub%2FTotalPass%20e%20quero%20saber%20como%20treinar%20na%20Body%20%26%20Soul." target="_blank" rel="noopener">Saber como funciona</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORÁRIOS -->
+<section id="horarios">
+  <div class="container hours-grid">
+    <div class="hours-side reveal">
+      <span class="eyebrow">Horários</span>
+      <h2 class="display">Do nascer do sol ao fim do expediente</h2>
+      <p>Treine antes do trabalho, no almoço ou à noite — são 16 horas e meia de academia aberta por dia durante a semana.</p>
+      <div class="bike-card">
+        <strong>Aulas de Bike Indoor</strong>
+        <p style="color:var(--grey)">Segunda e quarta às <b style="color:var(--yellow)">07:10</b> · Terça e quinta às <b style="color:var(--yellow)">19:10</b>. Vagas limitadas, reserve pelo WhatsApp.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <table class="hours-table">
+        <tr><td>Segunda a sexta</td><td>05:30 – 22:00</td></tr>
+        <tr><td>Sábado</td><td>07:00 – 14:00</td></tr>
+        <tr class="closed"><td>Domingo</td><td>Fechada — dia de descanso</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="loc" id="local">
+  <div class="container loc-grid">
+    <div class="reveal">
+      <span class="eyebrow">Onde estamos</span>
+      <h2 class="display">Pertinho da praia</h2>
+      <p>Na avenida principal da Praia de Itaparica, fácil de chegar a pé, de bike ou de carro.</p>
+      <p class="addr">Av. Saturnino Rangel Mauro, 3250<br>Praia de Itaparica, Vila Velha – ES<br>CEP 29102-036</p>
+      <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
+        <a class="btn btn-yellow" href="https://www.google.com/maps/search/?api=1&query=Av.+Saturnino+Rangel+Mauro,+3250+-+Praia+de+Itaparica,+Vila+Velha+-+ES" target="_blank" rel="noopener">Traçar rota</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/bodysoulvv/" target="_blank" rel="noopener">@bodysoulvv</a>
+      </div>
+    </div>
+    <div class="map-frame reveal">
+      <iframe title="Mapa — Body & Soul Fitness" loading="lazy" src="https://www.google.com/maps?q=Av.%20Saturnino%20Rangel%20Mauro%2C%203250%20-%20Praia%20de%20Itaparica%2C%20Vila%20Velha%20-%20ES&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="display">Antes de começar</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq"><button>Posso fazer uma aula experimental antes de fechar o plano?</button><div class="ans"><p>Pode! Chame a gente no WhatsApp, agende seu horário e venha conhecer a academia e treinar com a nossa equipe antes de decidir.</p></div></div>
+      <div class="faq"><button>Vocês aceitam WellHub e TotalPass?</button><div class="ans"><p>Sim — é só fazer seu check-in pelo aplicativo (WellHub ou TotalPass) e treinar conosco normalmente.</p></div></div>
+      <div class="faq"><button>Qual a diferença entre os planos de Pilates por frequência?</button><div class="ans"><p>Você escolhe quantas vezes por semana quer fazer Pilates (de 1x a 5x) e paga só pela frequência escolhida. Nos planos trimestrais, o valor mensal fica menor.</p></div></div>
+      <div class="faq"><button>Como funciona o plano Horário Especial?</button><div class="ans"><p>É o plano mais econômico (R$ 114,90/mês): a entrada na academia é feita entre 12h e 16h — o horário mais tranquilo do dia. Ele não contempla a modalidade Bike Indoor.</p></div></div>
+      <div class="faq"><button>Preciso agendar a aula de Bike Indoor?</button><div class="ans"><p>Sim, as vagas das aulas coletivas são limitadas. Reserve seu lugar pelo WhatsApp ou na recepção.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container reveal">
+    <h2 class="display">Sua evolução não precisa<br>esperar segunda-feira.</h2>
+    <p>Chame no WhatsApp, agende sua aula experimental e venha treinar de corpo e alma.</p>
+    <a class="btn" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20aula%20experimental." target="_blank" rel="noopener">Começar agora pelo WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo-link" style="margin-bottom:18px"><img src="images/logo-hero.png" alt="Body & Soul Fitness" class="header-logo" style="height:60px"></a>
+        <p style="margin-top:16px;max-width:30rem">Musculação, Pilates e Bike Indoor na Praia de Itaparica. Professores qualificados e acompanhamento de perto, do primeiro treino em diante.</p>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <a href="https://wa.me/5527998258636" target="_blank" rel="noopener">WhatsApp: (27) 99825-8636</a>
+        <a href="https://www.instagram.com/bodysoulvv/" target="_blank" rel="noopener">Instagram: @bodysoulvv</a>
+        <p>Av. Saturnino Rangel Mauro, 3250<br>Praia de Itaparica, Vila Velha – ES</p>
+      </div>
+      <div>
+        <h5>Horários</h5>
+        <p>Seg a sex: 05:30 – 22:00</p>
+        <p>Sábado: 07:00 – 14:00</p>
+        <p>Domingo: fechada</p>
+      </div>
+    </div>
+    <div class="copy-row">
+      <span>© <span id="year"></span> Body &amp; Soul Fitness. Todos os direitos reservados.</span>
+      <span>Praia de Itaparica · Vila Velha · ES</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5527998258636?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Body%20%26%20Soul." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.3-.4 0-.5.1-.7l.5-.6c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7a9.1 9.1 0 003.5 3.1c.5.2.9.3 1.2.4.5.2 1 .1 1.3.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script>
+// Menu mobile
+const burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+burger.addEventListener('click',()=>mm.classList.toggle('open'));
+mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.remove('open')));
+
+// Reveal no scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal,.mod').forEach(el=>{el.classList.add('reveal');io.observe(el)});
+
+// FAQ
+document.querySelectorAll('.faq button').forEach(b=>b.addEventListener('click',()=>{
+  const f=b.parentElement,a=f.querySelector('.ans'),open=f.classList.contains('open');
+  document.querySelectorAll('.faq.open').forEach(o=>{o.classList.remove('open');o.querySelector('.ans').style.maxHeight=0});
+  if(!open){f.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+}));
+
+// Dados dos planos por frequência
+const data={
+  combo:{m:[279.90,339.90,399.90,429.90,469.90],t:[259.90,319.90,379.90,409.90,449.90]},
+  pilates:{m:[179.90,249.90,309.90,359.90,409.90],t:[159.90,229.90,289.90,339.90,389.90]}
+};
+const fmt=v=>'R$ '+v.toFixed(2).replace('.',',');
+let period='m';
+function waLink(plano){return 'https://wa.me/5527998258636?text='+encodeURIComponent('Olá! Quero saber mais sobre o plano '+plano+'.')}
+function renderTables(){
+  const label=period==='m'?'mensal':'trimestral';
+  document.getElementById('comboBody').innerHTML=data.combo[period].map((v,i)=>
+    `<tr><td>${i+1}x na semana</td><td class="big">${fmt(v)}<span style="font-family:Manrope;font-size:.75rem;color:#7a7a70"> /mês</span></td><td><a class="btn btn-dark" style="padding:10px 20px;font-size:.8rem" target="_blank" rel="noopener" href="${waLink(`Musculação + Pilates ${i+1}x na semana (${label})`)}">Quero esse</a></td></tr>`).join('');
+  document.getElementById('pilatesBody').innerHTML=data.pilates[period].map((v,i)=>
+    `<tr><td>${i+1}x na semana</td><td class="big">${fmt(v)}<span style="font-family:Manrope;font-size:.75rem;color:#7a7a70"> /mês</span></td><td><a class="btn btn-dark" style="padding:10px 20px;font-size:.8rem" target="_blank" rel="noopener" href="${waLink(`Pilates ${i+1}x na semana (${label})`)}">Quero esse</a></td></tr>`).join('');
+}
+renderTables();
+
+// Tabs
+const tabs=document.querySelectorAll('.tab'),panes=document.querySelectorAll('.pane'),pt=document.getElementById('periodToggle');
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active'));t.classList.add('active');
+  panes.forEach(p=>p.classList.remove('show'));
+  document.getElementById(t.dataset.pane).classList.add('show');
+  pt.classList.toggle('show',t.dataset.pane==='p-combo'||t.dataset.pane==='p-pilates');
+}));
+
+// Toggle mensal/trimestral
+document.getElementById('periodSwitch').addEventListener('click',function(){
+  this.classList.toggle('right');
+  period=this.classList.contains('right')?'t':'m';
+  renderTables();
+});
+
+document.getElementById('year').textContent=new Date().getFullYear();
+
+// ============================================
+// FIREBASE — Lê preços atualizados em tempo real
+// ============================================
+(function(){
+  // Mesma config do admin.html
+  const firebaseConfig = {
+    apiKey: "AIzaSyD5om0K4ShV5h8SJbtUjByE5lNj2GiAD1o",
+    authDomain: "body-soul.firebaseapp.com",
+    databaseURL: "https://body-soul-default-rtdb.firebaseio.com",
+    projectId: "body-soul",
+    storageBucket: "body-soul.firebasestorage.app",
+    messagingSenderId: "151214962778",
+    appId: "1:151214962778:web:cf58ea624c8e7fa8d30063"
+  };
+
+  // Carrega Firebase SDK dinamicamente
+  const s1 = document.createElement('script');
+  s1.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js';
+  s1.onload = function(){
+    const s2 = document.createElement('script');
+    s2.src = 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js';
+    s2.onload = function(){
+      try {
+        if(!firebaseConfig.apiKey) return; // Firebase não configurado
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+        db.ref('site').on('value', function(snap){
+          const d = snap.val();
+          if(!d) return;
+          
+          // Atualiza preços de Musculação
+          const muscPrices = {
+            'musc_mensal':'154,90','musc_semestral':'134,90',
+            'musc_anual':'124,90','musc_especial':'114,90'
+          };
+          const muscCards = document.querySelectorAll('#p-musc .plan .val');
+          if(muscCards.length>=4){
+            if(d.musc_mensal) muscCards[0].textContent = d.musc_mensal;
+            if(d.musc_semestral) muscCards[1].textContent = d.musc_semestral;
+            if(d.musc_anual) muscCards[2].textContent = d.musc_anual;
+            if(d.musc_especial) muscCards[3].textContent = d.musc_especial;
+          }
+          
+          // Atualiza Combo (Musc + Pilates)
+          const comboM = [d.combo_m1,d.combo_m2,d.combo_m3,d.combo_m4,d.combo_m5].map(v=>v?parseFloat(v.replace(',','.')):null);
+          const comboT = [d.combo_t1,d.combo_t2,d.combo_t3,d.combo_t4,d.combo_t5].map(v=>v?parseFloat(v.replace(',','.')):null);
+          comboM.forEach((v,i)=>{ if(v) data.combo.m[i]=v; });
+          comboT.forEach((v,i)=>{ if(v) data.combo.t[i]=v; });
+          
+          // Atualiza Pilates
+          const pilM = [d.pilates_m1,d.pilates_m2,d.pilates_m3,d.pilates_m4,d.pilates_m5].map(v=>v?parseFloat(v.replace(',','.')):null);
+          const pilT = [d.pilates_t1,d.pilates_t2,d.pilates_t3,d.pilates_t4,d.pilates_t5].map(v=>v?parseFloat(v.replace(',','.')):null);
+          pilM.forEach((v,i)=>{ if(v) data.pilates.m[i]=v; });
+          pilT.forEach((v,i)=>{ if(v) data.pilates.t[i]=v; });
+          renderTables();
+          
+          // Atualiza VIP
+          const vipCards = document.querySelectorAll('#p-extra .plan .val');
+          if(d.vip_mensal && vipCards[0]) vipCards[0].textContent = d.vip_mensal;
+          if(d.avaliacao && vipCards[1]) vipCards[1].textContent = d.avaliacao;
+          
+          // Atualiza trimestral VIP no texto
+          if(d.vip_trimestral){
+            const vipList = document.querySelector('#p-extra .plan.feature ul');
+            if(vipList){
+              const items = vipList.querySelectorAll('li');
+              items.forEach(li=>{
+                if(li.textContent.includes('Trimestral')){
+                  li.textContent = 'Trimestral: R$ '+d.vip_trimestral+'/mês';
+                }
+              });
+            }
+          }
+        });
+      } catch(e){ console.log('Firebase não configurado:', e); }
+    };
+    document.head.appendChild(s2);
+  };
+  document.head.appendChild(s1);
+})();
+</script>
+</body>
+</html>
